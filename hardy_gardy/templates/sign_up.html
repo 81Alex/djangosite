@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+{% load sass_tags %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Вход/Регистрация</title>
+    <!-- <link rel="stylesheet" href="/home/user_admin/alexd/hardy_gardy/static/css/signin3.css"> -->
+  <!-- <link href="{% sass_src 'css/signin3.scss' %}" rel="stylesheet" type="text/css"/> -->
+  <link rel="stylesheet" media="(orientation: landscape)" href="{% sass_src 'css/signin_up_land.css' %}">
+  <link rel="stylesheet" media="(orientation: portrait)" href="{% sass_src 'css/signin_up_port.css' %}">
+</head>
+
+<body>
+   <div class=background>
+       <img src=/static/imgs/home5.jpeg />
+   </div>
+<div id="logo">
+  <h1><i> Регистрация</i></h1>
+</div>
+<section class="stark-login">
+  <form action="/main_menu/" method="post">
+     {% csrf_token %}
+    <div id="fade-box">
+      <input type="text" name="username" id="username" placeholder="Имя пользователя" required>
+      <input type="nickname" name="nickname" id="niсkname" placeholder="Ваш никнейм" required>
+      <input type="socioTim" name="sociTim" id="socioTim" placeholder="Ваш тим" required>
+      
+      <input type="email" placeholder="Адрес электронной почты" name="email" required>
+      <input type="password" placeholder="Пароль" name="password" required>
+      <input type="password" placeholder="Повторить пароль" name="password" required>
+
+      <button>Зарегистрироваться</button>
+  </form>  
+     <div class="btn btn-one">
+      <a href="/">
+       <button id="reg" type="button">Выйти</button>
+      </a>
+     </div>
+       <div id="circle1">
+              <div id="inner-cirlce1">
+                <h2> </h2>
+              </div>
+            </div>
+    
+    </section>
+    <div id="ava">
+        <div id="inner-cirlce1">
+        <h2> </h2>
+    </div>
+    </div>
+   
+    <div>
+	    <div>
+        <img id="kosmo" src="/static/imgs/ava.png" alt="Avatar" class="avatar">
+        <h2 id=textava>установить фото профиля</h2>
+	    </div>
+    </div>
+
+        <!--  <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+    
+<!-- <script src="static/script/signin.js"></script> -->
+</body>
+
+</html>
+
